@@ -8,13 +8,8 @@
                 data-aos="fade-up" data-aos-delay="200">
                 <h2 style="color:black">Selamat datang di portal</h2>
                 <h1 style="text-align:left;color:black; font-size: 30px;">Sistem Online Data Penerima Bantuan Sosial</h1>
-                <h2 style="color:black">Pemerintah Kabupaten Ciamis</h2>
-                <p style="text-align:justify;">Program bantuan sosial dirancang pemerintah untuk mendukung kesejahteraan
-                    masyarakat yang terdampak ekonominya akibat pandemi COVID-19.
-                    <a href="assets/img/bansos-1.png"class="glightbox play-btn mb-4">
-                        <u><strong>Lihat Selengkapnya</strong></u></a>
-                <p>
-                <p>Sekarang Anda dapat melihat daftar penerima bantuan di wilayah Anda.
+                <h2 style="color:black">Pemerintah Kendari</h2>
+                <p>Sekarang Anda dapat melihat daftar penerima bantuan.
                 <p>
                     <button type="button" class="btn btn-primary rounded" data-toggle="modal"
                         data-target="#exampleModal" style="font-size: 14px;">

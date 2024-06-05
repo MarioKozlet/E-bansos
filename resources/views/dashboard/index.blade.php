@@ -4,8 +4,8 @@
     :root {
         --header-height: 3rem;
         --nav-width: 68px;
-        --first-color: #4723D9;
-        --first-color-light: #AFA5D9;
+        --first-color: whitesmoke;
+        --first-color-light: #e1ac7ee8;
         --white-color: #F7F6FB;
         --body-font: 'Nunito', sans-serif;
         --normal-font-size: 1rem;
@@ -41,13 +41,13 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 1rem;
-        background-color: var(--white-color);
+        background-color: var(--first-color);
         z-index: var(--z-fixed);
         transition: .5s
     }
 
     .header_toggle {
-        color: var(--first-color);
+        color: black;
         font-size: 1.5rem;
         cursor: pointer
     }
@@ -100,23 +100,23 @@
 
     .nav_logo-icon {
         font-size: 1.25rem;
-        color: var(--white-color)
+        color: black
     }
 
     .nav_logo-name {
-        color: var(--white-color);
+        color: black;
         font-weight: 700
     }
 
     .nav_link {
         position: relative;
-        color: var(--first-color-light);
+        color: black;
         margin-bottom: 1.5rem;
         transition: .3s
     }
 
     .nav_link:hover {
-        color: var(--white-color)
+        color: var(--first-color-light)
     }
 
     .nav_icon {
@@ -132,7 +132,7 @@
     }
 
     .active {
-        color: var(--white-color)
+        color: var(--first-color-light)
     }
 
     .active::before {
@@ -141,7 +141,7 @@
         left: 0;
         width: 2px;
         height: 32px;
-        background-color: var(--white-color)
+        background-color: var(--first-color-light)
     }
 
     .height-100 {
@@ -193,19 +193,20 @@
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
-                        class="nav_logo-name">E - Bansos</span> </a>
-                <div class="nav_list"> <a href="#" class="nav_link active"> <i
-                            class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a
-                        href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
-                            class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i
-                            class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span>
-                    </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span
-                            class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i
-                            class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a
-                        href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span
-                            class="nav_name">Stats</span> </a> </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
-                    class="nav_name">SignOut</span> </a>
+                        class="nav_logo-name">E - Bansos</span>
+                </a>
+                <div class="nav_list">
+                    <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span
+                            class="nav_name">Dashboard</span> </a>
+                    <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
+                            class="nav_name">Users</span> </a>
+                    <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
+                            class="nav_name">Pendaftar Bansos</span> </a>
+                    <a href="{{ route('bansos.index') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
+                            class="nav_name">Penerima Bansos</span> </a>
+                </div>
+                <a href="{{ route('logout') }}" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
+                        class="nav_name">SignOut</span> </a>
         </nav>
     </div>
     <!--Container Main start-->

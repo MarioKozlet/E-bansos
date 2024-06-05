@@ -38,19 +38,22 @@
                         <span class="fw-bold fs-2 text-center">
                             E - BANSOS
                         </span>
-                        <div class="d-flex flex-column gap-2">
-                            <label for="username"> Username </label>
-                            <input type="text" name="" id="username"
-                                class="form-control bg-transparent text-white">
-                        </div>
-                        <div class="d-flex flex-column gap-2">
-                            <label for="password"> Password </label>
-                            <input type="password" name="" id="password"
-                                class="form-control bg-transparent text-white">
-                        </div>
-                        <a href="{{ route('dashboard') }}" class="btn btn-outline-light mt-2">
-                            Login
-                        </a>
+                        <form action="{{ route('ceklogin') }}" method="post">
+                            @csrf
+                            <div class="d-flex flex-column gap-2">
+                                <label for="email"> Email </label>
+                                <input type="text" name="email" id="username"
+                                    class="form-control bg-transparent text-white">
+                            </div>
+                            <div class="d-flex flex-column gap-2">
+                                <label for="password"> Password </label>
+                                <input type="password" name="password" id="password"
+                                    class="form-control bg-transparent text-white">
+                            </div>
+                            <button type="submit" class="btn btn-outline-light mt-2">
+                                Login
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

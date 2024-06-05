@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PenerimaBansosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +19,13 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('ceklogin', [AuthController::class, 'login'])->name('ceklogin');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->name('dashboard');
+
+
+Route::resource('/penerima/bansos', PenerimaBansosController::class);
