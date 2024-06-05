@@ -31,32 +31,52 @@
         }
     </style>
     <main>
-        <div class="d-flex justify-content-start z-10" style="height: 100vh">
-            <div class="card rounded-2 text-white h-100" style="backdrop-filter: blur(6px); background: #b8b8b818">
-                <div class="card-body">
-                    <div class="d-flex flex-column justify-content-center gap-2 h-100">
-                        <span class="fw-bold fs-2 text-center">
-                            E - BANSOS
-                        </span>
-                        <form action="{{ route('ceklogin') }}" method="post">
+        @if (session()->has('failed'))
+            <div class="alert alert-danger alert-dismissible fade show position-fixed top-0 right-0" style="z-index: 88" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                {{ session()->get('failed'); }}
+            </div>
+        @endif
+
+        <script>
+            var alertList = document.querySelectorAll(".alert");
+            alertList.forEach(function(alert) {
+                new bootstrap.Alert(alert);
+            });
+        </script>
+
+        <form action="{{ route('ceklogin') }}" method="post">
+            <div class="d-flex justify-content-start z-10" style="height: 100vh">
+                <div class="card rounded-2 text-white h-100" style="backdrop-filter: blur(6px); background: #b8b8b818">
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-center gap-2 h-100">
+                            <span class="fw-bold fs-2 text-center">
+                                E - BANSOS
+                            </span>
                             @csrf
                             <div class="d-flex flex-column gap-2">
                                 <label for="email"> Email </label>
                                 <input type="text" name="email" id="username"
                                     class="form-control bg-transparent text-white">
+                                @error('email')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="d-flex flex-column gap-2">
                                 <label for="password"> Password </label>
                                 <input type="password" name="password" id="password"
                                     class="form-control bg-transparent text-white">
+                                @error('password')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-outline-light mt-2">
                                 Login
                             </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 @endsection
