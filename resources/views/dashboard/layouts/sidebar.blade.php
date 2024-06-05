@@ -185,7 +185,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 <header class="header" id="header">
     <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-    <div class="header_img"> <img src="https://i1.sndcdn.com/avatars-000716184301-va46lr-t240x240.jpg" alt="">
     </div>
 </header>
 <div class="l-navbar" id="nav-bar">
