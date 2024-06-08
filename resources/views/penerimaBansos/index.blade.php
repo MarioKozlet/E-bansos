@@ -1,15 +1,11 @@
 @extends('dashboard.layouts.app')
 @section('content')
-<div class="d-flex justify-content-between align-items-center">
-    <div class="d-flex flex-column mb-3">
-        <span class="fs-3"> Penerima Bansos </span>
-        <small class="text-secondary"> Menu </small>    
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex flex-column mb-3">
+            <span class="fs-3"> Penerima Bansos </span>
+            <small class="text-secondary"> Menu </small>
+        </div>
     </div>
-
-    <div class="card">
-        taruh sesuatu disini kalau mau, kalau engga ya...hapus
-    </div>
-</div>
     <div class="input-group mb-3 w-25">
         <input type="text" name="" id="" class="form-control">
         <button class="btn btn-dark">
@@ -25,29 +21,24 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Pendapatan</th>
+                        <th scope="col">Tanggungan</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    @forelse ($finalData as $item)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $item['nama'] }}</td>
+                            <td>{{ money_format_idr($item['pendapatan']) }}</td>
+                            <td>{{ $item['jumlah_tanggungan'] }}</td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <th colspan="3" scope="row">Data Tidak ada</th>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>

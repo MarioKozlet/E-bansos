@@ -32,9 +32,10 @@
     </style>
     <main>
         @if (session()->has('failed'))
-            <div class="alert alert-danger alert-dismissible fade show position-fixed top-0 right-0" style="z-index: 88" role="alert">
+            <div class="alert alert-danger alert-dismissible fade show position-fixed top-0 right-0" style="z-index: 88"
+                role="alert">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                {{ session()->get('failed'); }}
+                {{ session()->get('failed') }}
             </div>
         @endif
 

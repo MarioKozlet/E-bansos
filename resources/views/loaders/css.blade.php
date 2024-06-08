@@ -24,7 +24,7 @@
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fontawesome/css/all.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/sidebar.css') }}" rel="stylesheet">
-    
+
     <!-- Template Main CSS File -->
 </head>
 
