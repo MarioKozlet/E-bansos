@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\PenerimaBansosController;
+use App\Http\Controllers\PenrimaBansosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +28,5 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 
-Route::resource('/penerima/bansos', PenerimaBansosController::class);
+Route::get('/penerima-bansos', [PenrimaBansosController::class, 'index'])->name('penerima-bansos.index');
+Route::post('/penerima-bansos/filter', [PenrimaBansosController::class, 'filter'])->name('penerima-bansos.filter');

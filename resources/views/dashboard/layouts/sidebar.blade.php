@@ -199,8 +199,8 @@
                         class="nav_name">Users</span> </a>
                 <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
                         class="nav_name">Pendaftar Bansos</span> </a>
-                <a href="{{ route('bansos.index') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
-                        class="nav_name">Penerima Bansos</span> </a>
+                <a href="{{ route('penerima-bansos.index') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i>
+                    <span class="nav_name">Penerima Bansos</span> </a>
             </div>
             <a href="{{ route('logout') }}" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
                     class="nav_name">SignOut</span> </a>
