@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PenrimaBansosController;
+use App\Http\Controllers\PenerimaBantuanHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Controllers\PenrimaBansosController;
 Route::get('/', function () {
     return view('index');
 })->name('home');
+Route::get('/penerima-bantuan', [PenerimaBantuanHomeController::class, 'index'])->name('penerima-bantuan');
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('ceklogin', [AuthController::class, 'login'])->name('ceklogin');
